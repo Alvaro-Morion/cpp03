@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 12:59:32 by amorion-          #+#    #+#             */
-/*   Updated: 2022/04/11 16:58:04 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/04/11 17:53:27 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define SCAVTRAP_HPP
 # include "ClapTrap.hpp"
 
-class	ScavTrap : public ClapTrap
+class	ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap();
