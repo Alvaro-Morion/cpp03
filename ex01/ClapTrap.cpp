@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 13:01:54 by amorion-          #+#    #+#             */
-/*   Updated: 2022/04/10 13:41:31 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/07/18 17:14:01 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 ClapTrap::ClapTrap() : name("Unnamed") , Hitpoints(10), Energy_points(10), Attack_damage(0)
 {
-	std::cout << "Default constructor:" << this->name << std::endl;
+	std::cout << "ClapTrap default constructor:" << this->name << std::endl;
 }
 ClapTrap::ClapTrap(ClapTrap const &src)
 {
