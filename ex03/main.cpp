@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 13:02:08 by amorion-          #+#    #+#             */
-/*   Updated: 2022/04/11 18:40:33 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/07/19 19:17:56 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,14 @@ int main(void)
 		DiamondTrap D1("Diam");
 		DiamondTrap D2;
 		DiamondTrap D3(D1);
+		
+		std::cout << "\t ATTRIBUTES \t" << std::endl;
+		std::cout << "name: " << D3.getName() << std::endl;
+		std::cout << "Hitpoints: " << D3.getHitpoints() << std::endl;
+		std::cout << "Energy_points: " << D3.getEnergy_points() << std::endl;
+		std::cout << "Attack_damage: " << D3.getAttack_damage() << std::endl;
 
+		std::cout << "\t FUNCIONES" << std::endl;	
 		D3.WhoAmI();
 		D2.attack("Enemy");
 		D2 = D3;

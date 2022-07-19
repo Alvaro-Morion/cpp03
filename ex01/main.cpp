@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 13:02:08 by amorion-          #+#    #+#             */
-/*   Updated: 2022/04/11 16:58:16 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/07/19 18:05:59 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main(void)
 		ScavTrap S3(S1);
 
 		S1.attack("Enemy");
+		S1.takeDamage(12);
 		S1.guardGate();
 	}
 	return(0);

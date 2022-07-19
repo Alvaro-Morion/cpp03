@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:07:32 by amorion-          #+#    #+#             */
-/*   Updated: 2022/04/11 18:26:35 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/07/19 19:35:59 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ ScavTrap::ScavTrap(std::string const name)
     this->Attack_damage = 20;
 	std::cout << "ScavTrap: Parametric constructor called " << this->name
 		<< std::endl;
+}
+
+/* Getters & Setters */
+unsigned int	ScavTrap::getScav_energy(void) const
+{
+	return(this->scav_energy);
 }
 
 /* Operators */

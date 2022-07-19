@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 13:01:54 by amorion-          #+#    #+#             */
-/*   Updated: 2022/07/18 17:09:36 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/07/19 18:01:24 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,46 @@ ClapTrap::~ClapTrap()
 	std::cout << "Destructor: " << this->name << std::endl;
 	return;
 }
+/* Getters and Setters */
+std::string ClapTrap::getName(void) const
+{
+	return(this->name);
+}
+
+unsigned int ClapTrap::getHitpoints(void) const
+{
+	return(this->Hitpoints);
+}
+
+unsigned int ClapTrap::getEnergy_points(void) const
+{
+	return(this->Energy_points);
+}
+
+unsigned int ClapTrap::getAttack_damage(void) const
+{
+	return(this->Attack_damage);
+}
+
+void	ClapTrap::setName(std::string const name)
+{
+	this->name = name;
+}
+
+void	ClapTrap::setHitpoints(unsigned int n)
+{
+	this->Hitpoints = n;
+}
+
+void	ClapTrap::setEnergy_points(unsigned int n)
+{
+	this->Energy_points = n;
+}
+
+void	ClapTrap::setAttack_damage(unsigned int n)
+{
+	this->Attack_damage = n;
+}
 
 /* Operators */
 
@@ -58,9 +98,8 @@ void	ClapTrap::attack(std::string const &target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	this->Hitpoints -= amount;
-	if(this->Hitpoints < 0)
-		this->Hitpoints = 0;
+	if(this->Hitpoints - amount < this->Hitpoints)
+		this->Hitpoints -= amount;
 	std::cout << "ClapTrap " << this->name << " has taken " << amount << " damage "
 		<< "Now it has " << this->Hitpoints << " Hitpoints" << std::endl;
 }
